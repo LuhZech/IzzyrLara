@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Izzy Lara - AI Fantasy Packs</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #111; color: #eee; margin: 0; padding: 0; }
+    header, section, footer { padding: 20px; max-width: 900px; margin: auto; }
+    header { text-align: center; background: #1a1a1a; }
+    h1 { color: #ff4d88; }
+    .pack { background: #1f1f1f; border-radius: 10px; padding: 15px; margin-bottom: 20px; }
+    .price { color: #ffcc00; font-weight: bold; }
+    .button { background: #ff4d88; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 10px; }
+    .extras, .payment, .contact, .order-form, .language-select { background: #1f1f1f; border-radius: 10px; padding: 15px; margin-top: 30px; }
+    ul { list-style-type: none; padding: 0; }
+    li { margin-bottom: 10px; }
+    footer { text-align: center; font-size: 14px; color: #aaa; margin-top: 50px; }
+    a { color: #ffcc00; text-decoration: none; }
+    input, select, textarea { width: 100%; padding: 10px; margin-top: 10px; background: #2a2a2a; border: none; color: #eee; border-radius: 5px; }
+    label { display: block; margin-top: 15px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Izzy Lara</h1>
+    <p id="tagline">Explore AI-generated sensual content. Custom, private, and unforgettable.</p>
+  </header>
+
+  <section class="language-select">
+    <label for="language">🌐 Language / Idioma / Idioma:</label>
+    <select id="language" onchange="changeLanguage()">
+      <option value="en">English</option>
+      <option value="pt">Português</option>
+      <option value="es">Español</option>
+    </select>
+  </section>
+
+  <div id="content-en">
+    <section>
+      <h2>✨ Available Packs</h2>
+      <div class="pack">
+        <h3>Feet Pack</h3>
+        <p>Close-ups, angles, with or without accessories<br><span class="price">$7 – $15</span></p>
+      </div>
+      <div class="pack">
+        <h3>Lingerie Pack</h3>
+        <p>Elegant, sensual, detailed visuals<br><span class="price">$10 – $20</span></p>
+      </div>
+      <div class="pack">
+        <h3>Cosplay Pack</h3>
+        <p>Fantasy characters, anime/movies inspired<br><span class="price">$15 – $25</span></p>
+      </div>
+      <div class="pack">
+        <h3>Exclusive Pack</h3>
+        <p>Custom-made to your desires<br><span class="price">$25 – $50+</span></p>
+      </div>
+    </section>
+    <section class="extras">
+      <h2>🔮 Extras</h2>
+      <ul>
+        <li>Custom Background: +$5</li>
+        <li>GIF Animations: +$10</li>
+        <li>Text Roleplay Caption: +$5</li>
+      </ul>
+    </section>
+    <section class="payment">
+      <h2>💳 Payment Options</h2>
+      <p>Payments accepted via PayPal, Wise, Pix (for Brazil), or Crypto (USDT/ETH/BTC). After payment, delivery will be via email or link within 48h.</p>
+    </section>
+    <section class="order-form">
+      <h2>📝 Place Your Order</h2>
+      <form action="mailto:laraizzyr@gmail.com" method="POST" enctype="text/plain">
+        <label>Name or Username:</label>
+        <input type="text" name="Name" required />
+
+        <label>Email:</label>
+        <input type="email" name="Email" required />
+
+        <label>Which pack(s) are you ordering?</label>
+        <textarea name="Packs" required></textarea>
+
+        <label>Extra requests or custom details:</label>
+        <textarea name="Extras"></textarea>
+
+        <button class="button" type="submit">Submit</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("language").value;
+      document.getElementById("content-en").classList.add("hidden");
+      document.getElementById("content-pt").classList.add("hidden");
+      document.getElementById("content-es").classList.add("hidden");
+      document.getElementById("content-" + lang).classList.remove("hidden");
+
+      const tagline = {
+        en: "Explore AI-generated sensual content. Custom, private, and unforgettable.",
+        pt: "Explore conteúdo sensual gerado por IA. Personalizado, privado e inesquecível.",
+        es: "Explora contenido sensual generado por IA. Personalizado, privado e inolvidable."
+      };
+
+      document.getElementById("tagline").innerText = tagline[lang];
+    }
+  </script>
+</body>
+</html>
