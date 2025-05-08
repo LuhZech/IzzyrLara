@@ -66,9 +66,33 @@
       </ul>
     </section>
     <section class="payment">
-      <h2>💳 Payment Options</h2>
-      <p>Payments accepted via PayPal, Wise, Pix (for Brazil), or Crypto (USDT/ETH/BTC). After payment, delivery will be via email or link within 48h.</p>
-    </section>
+  <h2>💳 Payment Options</h2>
+
+  <!-- Botão para PayPal -->
+  <p>Click to pay securely via PayPal:</p>
+  <a href="https://paypal.me/seunome/15" target="_blank" class="button">💳 Pay with PayPal</a>
+
+  <!-- QR code do Pix -->
+  <div style="margin-top: 30px;">
+    <h3>💸 Pix (Brazil only)</h3>
+    <p>Scan the QR code below using your bank app:</p>
+    <img src="LINK_DA_IMAGEM_QR" alt="Pix QR Code" style="max-width: 300px; width: 100%; border-radius: 10px;" />
+    <p style="font-size: 14px; color: #ccc;">or use Pix key: <strong>seu-email@dominio.com</strong></p>
+  </div>
+
+  <!-- Cripto -->
+  <div style="margin-top: 30px;">
+    <h3>🪙 Crypto</h3>
+    <p>Send to one of the wallets below:</p>
+    <ul>
+      <li><strong>USDT (TRC20):</strong> TYyourWalletAddress</li>
+      <li><strong>ETH (ERC20):</strong> 0xyourWalletAddress</li>
+      <li><strong>BTC:</strong> 1yourBTCaddress</li>
+    </ul>
+    <p style="font-size: 14px; color: #ccc;">Send proof via email or form after payment.</p>
+  </div>
+</section>
+
     <section class="order-form">
       <h2>📝 Place Your Order</h2>
       <form action="mailto:laraizzyr@gmail.com" method="POST" enctype="text/plain">
